@@ -51,7 +51,7 @@ def callback_handling():
     #    'picture': userinfo['picture']
     #}
     print('userinfo: {}'.format(userinfo))
-    return Response(userinfo, status=200, mimetype='application/json')
+    return userinfo, 200
 
 if __name__ == "__main__":
     app.run()
