@@ -24,7 +24,7 @@ auth0 = oauth.register(
     access_token_url=access_token_url,
     authorize_url=authorize_url,
     client_kwargs={
-        'scope': 'openid',
+        'scope': 'openid profile',
     },
 )
 
