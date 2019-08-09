@@ -40,9 +40,11 @@ def login():
 def callback_handling():
     # Handles response from token endpoint
     auth0.authorize_access_token()
-    resp = auth0.get('userinfo')
-    userinfo = resp.json()
+    resp1 = auth0.get('userinfo')
+    userinfo = resp1.json()
 
+    resp2 = auth0.get('token')
+    token = resp2.json()
     # Store the user information in flask session.
     # session['jwt_payload'] = userinfo
     # session['profile'] = {
@@ -50,6 +52,7 @@ def callback_handling():
     #    'name': userinfo['name'],
     #    'picture': userinfo['picture']
     #}
+    print('token: {}'.format(token))
     print('userinfo: {}'.format(userinfo))
     return userinfo, 200
 
