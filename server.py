@@ -39,12 +39,10 @@ def login():
 @app.route('/callback')
 def callback_handling():
     # Handles response from token endpoint
-    auth0.authorize_access_token()
+    token = auth0.authorize_access_token()
     resp1 = auth0.get('userinfo')
     userinfo = resp1.json()
 
-    resp2 = auth0.get('token')
-    token = resp2.json()
     # Store the user information in flask session.
     # session['jwt_payload'] = userinfo
     # session['profile'] = {
