@@ -13,7 +13,7 @@ api_base_url='https://dev-9tkz0vqw.auth0.com'
 access_token_url='https://dev-9tkz0vqw.auth0.com/oauth/token'
 authorize_url='https://dev-9tkz0vqw.auth0.com/authorize'
 
-redirect_uri='http://127.0.0.1:5000/callback'
+redirect_uri='https://openid-banestes-poc.herokuapp.com/callback'
 
 auth0 = oauth.register(
     'auth0',
